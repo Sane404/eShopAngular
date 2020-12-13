@@ -1,0 +1,70 @@
+.wrapper{
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+    table{
+        border-collapse: collapse;
+        @media (max-width:750px) {
+            font-size: 16px;
+        }
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+        thead{
+            border-bottom: 2px solid black;
+            tr{
+                th{
+                    @media (max-width:750px) {
+                        padding: 2px;
+                    }
+                    padding: 5px;
+                }
+            }
+        }
+        tbody{
+            tr:not(:last-of-type){
+                border-bottom: 1px solid rgb(170, 170, 170);
+                td{
+                    @media (max-width:750px) {
+                        padding: 2px;
+                    }
+                    padding: 5px;
+                    .quantity{
+                        margin-right: 10px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .total_cost{
+                border-top: 2px solid #000;
+            }
+        }
+    }
+}
+.less,.more{
+    display: inline-block;
+    @media (max-width:750px) {
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+    }
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: var(--clr-main);
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+.final_details{
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 30px;
+    border: 1px solid var(--clr-main);
+    transition: background .5s,color .5s;
+    &:hover{
+        background:var(--clr-main) ;
+        color: white;
+        cursor: pointer;
+    }
+}

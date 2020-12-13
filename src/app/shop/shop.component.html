@@ -1,0 +1,21 @@
+<div class="shop_wrapper">
+    <div class="filter">
+        <ul>
+            <li (click)='allProducts()'>
+                <p>All</p>
+            </li>
+            <li (click)='phoneOnly()'>
+                <p>Phones</p>
+            </li>
+            <li (click)='laptopOnly()'>
+                <p>Laptops</p>
+            </li>
+        </ul>
+    </div>
+    <div class="main_shop">
+        <h1>Check out our products</h1>
+        <div class="products_wrapper">
+            <app-product *ngFor='let item of db' [data]='item'></app-product>
+        </div>
+    </div>
+</div>

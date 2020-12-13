@@ -1,0 +1,28 @@
+<div class="wrapper">
+
+<table>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let item of order'>
+            <td>{{item.name}}</td>
+            <td>{{item.price}} $</td>
+            <td><span (click)='less(item)' class="less">-</span><span class="quantity">{{item.quantity}}</span><span (click)='more(item)' class="more">+</span></td>
+            <td>{{item.price * item.quantity}} $</td>
+        </tr>
+        <tr class="total_cost">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{total}} $</td>
+        </tr>
+    </tbody>
+</table>
+<button class="final_details" (click)='orderEnd()'>Finish the order</button>
+</div>

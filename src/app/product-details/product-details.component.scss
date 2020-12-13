@@ -1,0 +1,84 @@
+.container{
+    height: calc(100vh - 288px );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: height 1s;
+    .product_card{
+        display: flex;
+        @media (max-width:750px) {
+            flex-direction: column;
+
+        }
+        .product_image{
+            @media (max-width:750px) {
+                margin:10px 0;
+            }
+            svg{
+                @media (max-width:750px) {
+                    height: 150px;
+                    margin: 0 auto;
+                    display: block;
+                }
+                @media (max-width:450px) {
+                    height: 100px;
+                    
+                }
+                height: 300px;
+            }
+        }
+        .product_info{
+            margin-left: 30px;
+            max-width: 400px;
+            @media (max-width:750px) {
+                max-width: 100%;
+            }
+            span{
+                display: block;
+                margin: 5px 0;
+            }
+            p{
+                padding: 5px 0;
+            }
+            select{
+                margin-right: 10px;
+                padding: 3px;
+            }
+            button{
+                border-radius: 5px;
+                width: 150px;
+                border: none;
+                padding: 5px;
+                background-color: var(--clr-main);
+                color: white;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+    }
+    .more_products_switch{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        cursor: pointer;
+        transform: translateX(-50%);
+    }
+}
+.container.grow{
+    height: calc(100vh - 78px);
+    align-items: center;
+}
+.more_products_wrap{
+    border-top:  rgb(204, 204, 204) 1px solid;
+    padding-top: 10px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    transition: transform 1s;
+    overflow-x: scroll;
+    flex-wrap: wrap;
+}
+.more_products_wrap.hidden{
+    transform: translateY(200px);
+}
